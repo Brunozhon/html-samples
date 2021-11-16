@@ -1,3 +1,46 @@
 {
-  
+  "name": "Lunch Menu: 1st week (Bean Week)",
+  "content": {
+    "Monday": [
+      "Fried beans",
+      "Cheezy Pull-Aparts", 
+      "Fruit Cup", 
+      "Mariana"
+    ],
+    "Tuesday": [
+      "Refried beans", 
+      "Lasanga",
+      "Chips", 
+      "Mini-pizza"
+    ],
+    "Wednesday": [
+      "Rerefried beans",
+      "Subway", 
+      "Mayonise",
+      "Cupcakes"
+    ],
+    "Thursday (Bean Day)": [
+      "Rererefried beans",
+      "Mexican beans",
+      "Baked beans",
+      "Kidney beans",
+      "Bean cakes"
+    ],
+    "Friday": [
+      "Rerererefried beans",
+      "Pizza",
+      "Mixed Fruit Cup",
+      "Subsubway",
+      "Mayonise",
+      "Create-your-own lunch"
+    ]
+  },
+  "comments": [
+    "Are rerefried beans a thing?",
+    "We, the school, fries the beans every day, so rerefried beans are a thing.",
+    "Thanks for telling me that. Are rererefried beans a thing?",
+    "Yes.",
+    "Are rerererefried beans a thing?",
+    "YES!"
+  ]
 }
