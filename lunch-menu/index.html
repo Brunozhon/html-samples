@@ -11,20 +11,6 @@
     <h1>Lunch menu</h1>
     <div id="lm"></div>
     <script>
-      var firstweek = fetch("lunch-menu-1st-week.json")
-      var urlSearchParams = new URLSearchParams(location.search)
-      if (!!(urlSearchParams.get("week"))) {
-        var week = urlSearchParams.get("week")
-        if (week == 1) {
-          firstweek
-            .then(r => r.json())
-            .then(json => processLunchMenu(json))
-        } else {
-          location.search = "?week=1"
-        }
-      } else {
-        location.search = "?week=1"
-      }
       function processLunchMenu(json) {
         var html = ""
         html += "<h2>" + json.name + "</h2><p>Monday lunch:"
@@ -50,6 +36,46 @@
         html += "</p>"
         document.getElementById("lm").innerHTML = html
       }
+      var firstweek = fetch("lunch-menu-1st-week.json")
+      var urlSearchParams = new URLSearchParams(location.search)
+      if (!!(urlSearchParams.get("week"))) {
+        var week = urlSearchParams.get("week")
+        if (week == 1) {
+          firstweek
+            .then(r => r.json())
+            .then(json => processLunchMenu(json))
+        } else {
+          location.search = "?week=1"
+        }
+      } else {
+        location.search = "?week=1"
+      }
+      /*
+      function processLunchMenu(json) {
+        var html = ""
+        html += "<h2>" + json.name + "</h2><p>Monday lunch:"
+        for (let items of json.content.Monday) {
+          html += items.join(", ")
+        }
+        html += "</p><p>Tuesday lunch:"
+        for (let items of json.content.Tuesday) {
+          html += items.join(", ")
+        }
+        html += "</p><p>Wednesday lunch:"
+        for (let items of json.content.Wednesday) {
+          html += items.join(", ")
+        }
+        html += "</p><p>Thursday lunch:"
+        for (let items of json.content.Thursday) {
+          html += items.join(", ")
+        }
+        html += "</p><p>Friday lunch:"
+        for (let items of json.content.Friday) {
+          html += items.join(", ")
+        }
+        html += "</p>"
+        document.getElementById("lm").innerHTML = html
+      }*/
     </script>
   </body>
 </html>
