@@ -13,26 +13,11 @@
     <script>
       function processLunchMenu(json) {
         var html = ""
-        html += "<h2>" + json.name + "</h2><p>Monday lunch:"
-        for (let items of json.content.Monday) {
-          html += items.join(", ")
-        }
-        html += "</p><p>Tuesday lunch:"
-        for (let items of json.content.Tuesday) {
-          html += items.join(", ")
-        }
-        html += "</p><p>Wednesday lunch:"
-        for (let items of json.content.Wednesday) {
-          html += items.join(", ")
-        }
-        html += "</p><p>Thursday lunch:"
-        for (let items of json.content.Thursday) {
-          html += items.join(", ")
-        }
-        html += "</p><p>Friday lunch:"
-        for (let items of json.content.Friday) {
-          html += items.join(", ")
-        }
+        html += "<h2>" + json.name + "</h2><p>Monday lunch:" + json.content.Monday.join(", ")
+        html += "</p><p>Tuesday lunch: " + json.content.Tuesday.join(", ")
+        html += "</p><p>Wednesday lunch: " + json.content.Wednesday.join(", ")
+        html += "</p><p>Thursday lunch: " + json.content.Thursday.join(", ")
+        html += "</p><p>Friday lunch: " + json.content.Friday.join(", ")
         html += "</p>"
         document.getElementById("lm").innerHTML = html
       }
